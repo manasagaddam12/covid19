@@ -4,7 +4,7 @@ import joblib
 import pandas as pd
 
 # Load the trained model
-model = joblib.load("C:\\Users\\Manasa\\Documents\\covid19\\ml_source\\covid_diag.pkl")
+model = joblib.load("covid_diag.pkl")
 
 # Define FastAPI app
 app = FastAPI()
