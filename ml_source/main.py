@@ -3,8 +3,13 @@ from pydantic import BaseModel
 import joblib
 import pandas as pd
 
-# Load the trained model
-model = joblib.load("covid_diag.pkl")
+import os
+
+
+BASE_DIR = os.path.dirname(__file__)
+model_path = os.path.join(BASE_DIR, "covid_diag.pkl")
+model = joblib.load(model_path)
+
 
 # Define FastAPI app
 app = FastAPI()
